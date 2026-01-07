@@ -6,10 +6,10 @@ import Services from './Components/Services';
 
 const App = () => {
 
-  const [theme, setTheme] = useState(localStorage.getItem('theme') ? localStorage.getItem('theme') : 'bg-light');
+  const [theme, setTheme] = useState(localStorage.getItem('theme') || 'light');
 
   return (
-    <div className='dark:bg-black relative'>
+    <div className='dark:bg-black relative max-w-screen overflow-hidden'>
       <Navbar theme={theme} setTheme={setTheme} />
       <Hero />
       <TrustedBy />
